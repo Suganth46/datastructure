@@ -38,6 +38,7 @@ public class Main {
         listCll.display();
         listCll.insert(4, 3);
         listCll.display();
-
+        listCll.delete(3);
+        listCll.display();
     }
 }

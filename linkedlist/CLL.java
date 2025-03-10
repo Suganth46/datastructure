@@ -47,6 +47,44 @@ public class CLL {
         temp.next=node;
         size+=1;
     }
+    public int deleteFirst(){
+        int val=head.val;
+        head=head.next;
+        tail.next=head;
+        size-=1;
+        return val;
+    }
+    public int deleteLast(){
+        int val=tail.val;
+        if(size<=1){
+            return deleteFirst();
+        }
+        Node seclast=get(size-2);
+        seclast.next=head;
+        tail=seclast;
+        size-=1;
+        return val;
+    }
+    public int delete(int index){
+        if(index==0){
+            return deleteFirst();
+        }
+        if(index==size){
+            return deleteLast();
+        }
+        Node temp=get(index-1);
+        int val=temp.next.val;
+        temp.next=temp.next.next;
+        size-=1;
+        return val;
+    }
+    public Node get(int index){
+        Node temp=head;
+        for(int i=0;i<index;i++){
+            temp=temp.next;
+        }
+        return temp;
+    }
     public void display(){
         Node node=head;
         if(head!=null){
