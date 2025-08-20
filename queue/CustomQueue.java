@@ -41,7 +41,11 @@ public class CustomQueue {
         }
         return data[0];
     }
-
+    public void display(){
+        for(int i=0;i<ptr;i++){
+            System.out.print(data[ptr]+" ");
+        }
+    }
     public boolean isFull() {
         return ptr == data.length - 1;
     }

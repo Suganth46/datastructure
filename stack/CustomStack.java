@@ -31,6 +31,11 @@ public class CustomStack {
         }
         return data[ptr];
     }
+    public void display(){
+        for (int i = 0; i < ptr; i++) {
+            System.out.print(data[ptr]+" ");
+        }
+    }
     public boolean isEmpty(){
              return ptr==-1;
     }

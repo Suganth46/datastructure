@@ -1,5 +1,7 @@
 package stack;
 
+import linkedlist.LL;
+
 public class LinkedListStack {
     private Node head;
     private Node tail;
@@ -36,6 +38,14 @@ public class LinkedListStack {
         else{
             return head.value;
         }
+    }
+    public void display(){
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.value + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("End");
     }
 
     public boolean isEmpty() {

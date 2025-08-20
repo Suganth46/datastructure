@@ -57,6 +57,7 @@ public class CircularQueue {
 //                System.out.println(arr[k]+" index: "+k);
                 k=(k+1)%capacity;
             }
+            System.out.print("END\n");
         }
     }
     public int getSize(){

@@ -41,6 +41,19 @@ public class LinkedListQueue {
             return head.value;
         }
     }
+    public void display() throws QueueExecption {
+        if(isEmpty()){
+            throw new QueueExecption("Queue is Empty");
+        }
+        else{
+            Node temp=head;
+            while (temp!=null) {
+                System.out.print(temp.value + "->");
+                temp = temp.next;
+            }
+            System.out.print("END\n");
+        }
+    }
     public boolean isEmpty() {
         return size==0;
     }

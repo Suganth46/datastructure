@@ -50,6 +50,7 @@ public class LinkedListCircularQueue {
                 System.out.print(temp.value+"->");
                 temp=temp.next;
             }while (temp!=front);
+            System.out.print("END");
         }
     }
     public int getSize(){

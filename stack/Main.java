@@ -8,5 +8,6 @@ public class Main {
         linkedListStack.push(30);
         linkedListStack.pop();
         System.out.println(linkedListStack.peek());
+        linkedListStack.display();
     }
 }
