@@ -27,6 +27,21 @@ public class main{
 		}
 		return findAllIndex(arr,target,i+1,list);
 	}
+	static List<Integer> findAllIndex2(int[] arr,int target,int i){
+		ArrayList<Integer> list=new ArrayList<>();
+		if(i==arr.length){
+			return list;
+		}
+		if(arr[i]==target){
+			list.add(i);
+		}
+		ArrayList<Integer> ansFromBelowCalls= findAllIndex(arr,target,i+1,list);
+		
+		 list.addAll(ansFromBelowCalls);
+		 
+		 return list;
+		 
+	}
 	public static void main(String args[]){
 		int[] arr={1,2,3,10,5,3,4,7,3};
 		System.out.println(findAllIndex(arr,3,0,new ArrayList<>()));
