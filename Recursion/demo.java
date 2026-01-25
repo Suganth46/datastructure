@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class main{
 	static boolean find(int[] arr,int target,int i){
 		if(i==arr.length){
@@ -17,8 +17,18 @@ public class main{
 			return findIndex(arr,target,i+1);
 		}
 	}
+	
+	static List<Integer> findAllIndex(int[] arr,int target,int i,List<Integer> list){
+		if(i==arr.length){
+			return list;
+		}
+		if(arr[i]==target){
+			list.add(i);
+		}
+		return findAllIndex(arr,target,i+1,list);
+	}
 	public static void main(String args[]){
-		int[] arr={1,2,3,10,5,7};
-		System.out.println(findIndex(arr,3,0));
+		int[] arr={1,2,3,10,5,3,4,7,3};
+		System.out.println(findAllIndex(arr,3,0,new ArrayList<>()));
 	}
 }
